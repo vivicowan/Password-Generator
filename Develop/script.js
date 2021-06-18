@@ -23,11 +23,12 @@ function promptCriteria () {
   if(isNaN(passLength) || passLength < 8 || passLength > 128){
     alert ("INVALID PASSWORD LENGTH");
     passLength = 0;
-  } 
-  
-  
-
-
+  } else {
+    useUpper = confirm("Would you like Uppercase letters?");
+    useLower = confirm("Would you like Lowercase letters?");
+    useNum = confirm("Would you like Numbers?");
+    useSpec = confirm("Would you like Special characters?");
+  }
 }
 
 // var password = generatePassword();
