@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector('#generate');
+var password = "";
 var passLength = 0;
 var useUpper = true;
 var useLower = true; 
@@ -28,10 +29,16 @@ function promptCriteria () {
     useLower = confirm("Would you like Lowercase letters?");
     useNum = confirm("Would you like Numbers?");
     useSpec = confirm("Would you like Special characters?");
+    if (!useUpper && !useLower && !useNum && !useSpec){
+      alert ("MUST CHOOSE AT LEAST ONE TYPE.");
+      passLength = 0;
+    }
+  }
+  if (passLength !== 0) {
+    password = generatePassword();
   }
 }
 
-// var password = generatePassword();
 
 
 // Add event listener to generate button
