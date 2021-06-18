@@ -1,22 +1,17 @@
-# <Your-Project-Title>
+# Password Generator
   
 ## Description
   
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+- The motivation behind this project was to create a generator that can make a strong password between 8 and 128 characters.
+- I decided to build this project in JavaScript so that when creating a password, there can be greater security.
+- It solves a security problem that many people are vunerable to. If there is not a strong password, it will be easy to get into private information.
+- I learned how to apply JavaScript in a very applicable way by making this generator. I was able to create complex functions that work.
   
-## Usage
-  
-Provide instructions and examples for use. Include screenshots as needed.
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
-## Credits
+## Screenshot
 
+![Screenshot!](images/screenshot.png)
+ 
+## Link
 
-- Repository contains quality readme file with description, screenshot, and link to deployed application.
+- https://vivicowan.github.io/password-generator/
 
