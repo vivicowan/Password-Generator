@@ -10,13 +10,29 @@ var useSpec = true;
 // Write password to the #password input
 function writePassword() {
   var passwordText = document.querySelector('#password');
-  
-  
   passwordText.value = password;
 }
 
 function generatePassword(){
-  alert ("Generate Password")
+  var password = "";
+
+  var allUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var allLower = "abcdefghijklmnopqrstuvwxyz";
+  var allNum = "0123456789";
+  var allSpec = "!@#$%^&*";
+  var allCandidate = "";
+
+  if (useUpper)  allCandidate += allUpper;
+  if (useLower)  allCandidate += allLower; 
+  if (useNum)  allCandidate += allNum;
+  if (useSpec)  allCandidate += allSpec;
+
+  console.log("allCandidate = " + allCandidate);
+
+  for (var i = 0; i < passLength; i++)
+    password += allCandidate.charAt(Math.floor(Math.random() * allCandidate.length));
+
+  return password;
 }
 
 function promptCriteria () {
@@ -30,12 +46,13 @@ function promptCriteria () {
     useNum = confirm("Would you like Numbers?");
     useSpec = confirm("Would you like Special characters?");
     if (!useUpper && !useLower && !useNum && !useSpec){
-      alert ("MUST CHOOSE AT LEAST ONE TYPE.");
+      alert ("MUST CHOOSE AT LEAST ONE TYPE!");
       passLength = 0;
     }
   }
   if (passLength !== 0) {
     password = generatePassword();
+    writePassword();
   }
 }
 
@@ -46,11 +63,7 @@ generateBtn.addEventListener('click', promptCriteria);
 
 // declare some variables for the answers
 // password (the generated password)
-// allUpperCase (array of all uppercase letters)
-// allLowerCase (array of all lowercase letters)
-// allNumbers (array of all numbers)
-// allSpec (array of all special characters)
-// candidates (array of characters chosen by user)
+
 // passLength <- prompt for length
 // useUpper <- confirm use uppercase
 // useLower <- confirm use lowercase
