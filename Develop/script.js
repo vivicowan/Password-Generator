@@ -18,8 +18,8 @@ function generatePassword(){
 
   var allUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var allLower = "abcdefghijklmnopqrstuvwxyz";
-  var allNum = "0123456789";
-  var allSpec = "!@#$%^&*";
+  var allNum = "012345678901234567890123456789"; //Increased frequency of numbers.
+  var allSpec = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
   var allCandidate = "";
 
   if (useUpper)  allCandidate += allUpper;
